@@ -1,0 +1,19 @@
+<div class="notif">
+    <div class="notif__block ">
+        <app-notif-email></app-notif-email>
+    </div>
+    <div class="notif__block _messenger link _link-transition-left">
+        <div class="link__row">
+            <svg class="link__img _small-messenger">
+          <use href="#icon-messenger"></use>
+        </svg>
+            <p class="link__text">Мессенджер</p>
+        </div>
+    </div>
+    <div class="notif__block _coronavirus link _link-transition-left">
+        <div class="link__column">
+            <span class="link__text">Коронавирус в России</span>
+            <img class="link__img _main-info" [src]="fullImagePath" alt="коронавирус" />
+        </div>
+    </div>
+</div>

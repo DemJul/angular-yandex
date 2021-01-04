@@ -1,0 +1,27 @@
+@import "color";
+@import "font-vars";
+@import "mixins";
+.notif {
+    top: 10px;
+    right: 0px;
+    width: 180px;
+    .font-notif();
+    margin-right: 6px;
+
+
+    &__block {
+        border-radius: 8px;
+        box-shadow: 0 0 32px @clr-shadow-aside;
+        margin-bottom: 7px;
+
+        &._coronavirus {
+            padding: 12px 14px;
+        }
+
+        &._messenger {
+            padding: 12px 14px;
+            height: 16px;
+            display: flex;
+        }
+    }
+}

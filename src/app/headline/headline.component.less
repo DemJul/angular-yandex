@@ -1,0 +1,53 @@
+@color-header: #90919d;
+@color-search: #ffdb4d;
+@color-link: red;
+@font-header-light: 11px;
+
+.font-header-light() {
+    font-size: @font-header-light;
+ }
+
+.headline {
+
+    &._yandex {
+        color: @color-header;
+        line-height: 42px;
+        margin-right: 210px;
+        margin-top: 10px;
+        padding-left: 20px;
+    }
+
+    &__item {
+        .display();
+
+        &:nth-child(1) {
+            width: 300px;
+        }
+    }
+
+    &__geolink {
+        .display();
+        padding-right: 16px;
+
+        &:hover {
+            color: @color-link;
+        }
+
+        &:focus {
+            outline: 2px solid @color-search;
+        }
+    }
+
+    &__data-time {
+        .font-header-light();
+
+        &:focus {
+            outline: 2px solid @color-search;
+        }
+    }
+}
+
+.display() {
+    display: flex;
+    align-items: baseline;
+}

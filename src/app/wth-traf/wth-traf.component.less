@@ -1,0 +1,43 @@
+@import "font-vars";
+.wth-traf {
+    display: flex;
+    flex-direction: column;
+
+
+    &__info {
+        display: flex;
+        align-items: center;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+    }
+
+    &__subtitle {
+        list-style-type: none;
+        display: inline;
+        margin-right: 5px;
+    }
+
+    &__current-info {
+        .font-wth-traf();
+        margin-right: 12px;
+    }
+
+    &__block {
+        height: 72px;
+        padding-left: 20px;
+        padding-right: 4px;
+        width: 293px;
+
+        &:last-child {
+            margin-top: 18px;
+        }
+
+        &:hover .dropdown {
+            visibility: visible;
+        }
+    }
+
+}

@@ -1,0 +1,34 @@
+@import "color";
+@import "font-vars";
+@import "mixins";
+.notif-email {
+
+    height: 118px;
+    box-sizing: border-box;
+    padding: 12px 14px;
+
+    &__titles {
+        display: flex;
+        justify-content: space-between;
+        .font-title();
+    }
+
+    &__button {
+        margin-top: 18px;
+        padding: 7px 14px 8px;
+        border-radius: 3px;
+        background: @bgr-btn-small;
+        border: none;
+        width: 100%;
+        text-align: center;
+
+        &:hover {
+            cursor: pointer;
+            background-color: @bgr-btn-sml-h;
+            transition: background-color .3s;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@import "color";
+@import "font-vars";
+@import "font";
+@import "mixins";
+@import "normalize";
+@import "reset";
+.container {
+
+    &._yandex {
+        .ya-font-base();
+        
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 921px;
+    }
+
+    &__right {
+        float: right;
+        position: fixed;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        max-width: 921px;
+        margin: auto;
+    }
+
+    &__svg-store {
+        &._hidden {
+            .hidden();
+        }
+    }
+}

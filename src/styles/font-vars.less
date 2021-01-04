@@ -1,0 +1,114 @@
+// задаем основные параметры шрифта в виде миксинов и переменных
+
+@ya-font-family: 'YS Text', 'Helvetica Neue', Arial, sans-serif;
+@c-font-family: 'Rubic', Tahoma, sans-serif;
+@c-second-font-family: 'Sentinel', 'Roboto' ,Helvetica,Arial,sans-serif, 'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+@m-header-font-family: 'Helvetica Neue', Arial, sans-serif;
+@m-font-family: 'Helvetica', Arial, sans-serif;
+@font-type-header: Verdana, Arial, Helvetica, sans-serif;
+@font-normal-size: 13px;
+@font-small: 12px;
+@font-input: 14px;
+@font-middle: 16px;
+@font-wth-traf: 26px;
+@c-font: 20px;
+
+// пока не стала объединять в одну переменную
+@font-header-light: 11px;
+@font-small-normal: 11px;
+@font-big: 24px;
+@m-font-middle: 17px;
+@m-font-small: 15px;
+@p-main: 34px;
+@c-font-middle: 18px;
+@c-font-big: 48px;
+@c-font-big_middle: 38px;
+@c-font-big_small: 32px;
+
+
+.ya-font-base() {
+   font-family: @ya-font-family;
+   font-weight: 400;
+   font-style: normal;
+   font-size: @font-normal-size;
+}
+
+.m-font-base(@font-family: @m-font-family) {
+   font-family: @font-family;
+   font-weight: 400;
+   font-style: normal;
+   font-size: @m-font-small;
+}
+
+.c-font-base(@font-family: @c-font-family) {
+   font-family: @font-family;
+   font-weight: 700;
+   font-style: normal;
+   line-height: 1.7;
+   font-size: @c-font;
+}
+
+.c-second-font-base(@font-family: @c-second-font-family) {
+   font-family: @font-family;
+   font-weight: 700;
+   font-style: normal;
+   line-height: 1.7;
+   font-size: @c-font;
+}
+
+.font-light(@size: @font-normal-size) {
+   font-size: @size;
+   font-weight: 200;
+
+}
+
+.font-header() {
+   font-family: @font-type-header;
+}
+
+.font-header-light() {
+   font-size: @font-header-light;
+}
+
+.font-bold(@size: @font-normal-size) {
+   font-weight: 600;
+   font-size: @size;
+}
+
+.font-small(@weight: 700) {
+   font-weight: @weight;
+   font-size: @font-small;
+}
+
+.font-title() {
+   font-weight: 500;
+}
+
+.font-input() {
+   font-size: @font-input;
+}
+
+.font-middle() {
+   font-size: @font-middle;
+}
+
+.font-wth-traf() {
+   font-size: @font-wth-traf;
+}
+
+.font-notif() {
+   font-size: 12px;
+}
+
+.m-font-bold(@size: @font-normal-size) {
+   font-weight: 700;
+   font-size: @size;
+}
+
+.m-font-middle(){
+   font-size: @m-font-middle;
+}
+
+.c-font-normal(@size: @c-font){
+   font-weight: 400;
+}

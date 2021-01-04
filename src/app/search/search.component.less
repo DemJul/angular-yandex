@@ -1,0 +1,199 @@
+@import "mixins";
+@import "color";
+@import "font-vars";
+.search {
+    &__logo {
+        .img-size(140px, 100px);
+        margin-left: -140px;
+        transform: translateY(-6px);
+
+        &:focus {
+            outline: 2px solid @color-search;
+        }
+    }
+
+    &__find {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 921px;
+        margin: auto;
+
+    }
+
+    &__arrow {
+        width: 10px;
+        height: 40px;
+        fill: @color-search;
+    }
+
+    &__input-wrapper {
+        height: 40px;
+        width: 100%;
+        border: 3px solid @color-search;
+        box-sizing: border-box;
+        border-radius: 5px 0 0 5px;
+        display: flex;
+        align-items: center;
+
+        &._mail {
+            border-radius: 8px;
+            border: 3px solid @m-color-link;
+            border-radius: 8px 0 0 8px;
+            padding: 0 10px;
+
+
+        }
+    }
+
+    &__input {
+        .font-input();
+        width: 100%;
+        border: 0 solid transparent;
+        box-sizing: border-box;
+        color: @color-base;
+        line-height: 16px;
+        padding-left: 11px;
+
+        &._mail {
+            border-radius: 6px 0 0 6px;
+
+            &:focus .search__input-wrapper._mail {
+                border: 4px solid @m-color-link;
+                transition: border .3s;
+            }
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__button {
+        height: 40px;
+        background: @color-search;
+        box-sizing: border-box;
+        width: 77px;
+        margin-right: 15px;
+        margin-left: -2px;
+        .font-middle();
+        line-height: 36px;
+        text-align: center;
+        border: 0;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            border: 20px solid transparent;
+            border-left: 20px solid @color-search;
+            left: 1px;
+            right: 0px;
+            transform: translate(100%, -38px);
+
+        }
+
+        &:hover {
+            background: @color-search-dark;
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                border: 20px solid transparent;
+                border-left: 20px solid @color-search-dark;
+                left: 1px;
+                right: 0px;
+                transform: translate(100%, -38px);
+            }
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &-normal {
+            border-radius: 0 8px 8px 0;
+            background: @m-color-link;
+            height: 40px;
+            width: 107px;
+            .m-font-middle();
+            line-height: 40px;
+            border: none;
+            color: @m-white;
+            padding: 0 15px;
+
+            &:hover {
+                background: @m-dark-orange;
+                transition: background .3s;
+            }
+            &:focus {
+                outline: none;
+            }
+
+        }
+    }
+
+    &__img {
+
+        width: 32px;
+        height: 100%;
+        padding-right: 4px;
+        box-sizing: border-box;
+        fill: @color-header;
+        opacity: .45;
+        cursor: pointer;
+
+        &:hover {
+            opacity: .90;
+        }
+
+
+        &._last {
+            padding-right: 0;
+            width: 36px;
+            margin-top: 20px;
+            opacity: .90;
+
+            &:hover {
+                fill: @color-grey-dark;
+            }
+        }
+
+    }
+
+    &__text-link {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    &__m-img {
+        .img-size(22px, 16px);
+    }
+
+    &._mail {
+        color: @m-color;
+    }
+
+    &__m-titles {
+        height: 24px;
+        transform: translateY(-6px);
+    }
+
+    &__option {
+        font-size: @font-normal-size;
+        white-space: nowrap;
+
+        &._title {
+            color: @color-currency-change;
+            padding-right: 5px;
+        }
+
+        &._desc {
+            color: @m-color !important;
+            padding-right: 5px;
+        }
+    }
+
+}

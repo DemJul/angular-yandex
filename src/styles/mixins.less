@@ -1,0 +1,28 @@
+// здесь задаем миксины, которые потом можно будет переиспользовать
+
+.cont-center() {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.hidden() {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip: rect(0 0 0 0);
+}
+
+.visibilite() {
+    visibility: visible;
+    opacity: 1;
+    clip: auto;
+    position: static;
+}
+
+.img-size(@width, @height) {
+    width: @width;
+    height: @height;
+}
