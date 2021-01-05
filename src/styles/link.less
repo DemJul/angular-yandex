@@ -1,0 +1,338 @@
+@import "font-vars";
+@import "color";
+@import "mixins";
+.link {
+    text-decoration: none;
+
+    &__title-aside._bold {
+        .font-bold();
+    }
+
+    &__aside {
+        text-align: center;
+        margin-top: 14px;
+        margin-bottom: 4px;
+    }
+
+    &._link-transition-left:hover {
+        transform: translateX(-15px);
+        transition: transform .2s linear;
+    }
+
+    &._link-transition-up:hover>.link__img {
+        transform: translateY(-4px);
+        transition: transform .2s linear;
+    }
+
+    &._link-middle {
+        color: @color-link-middle;
+        text-decoration: none;
+    }
+
+    &__img {
+        .img-size(14px, 14px);
+        background-size: 14px;
+        margin-right: 6px;
+
+        &._small-messenger {
+            .img-size(24px, 24px);
+        }
+
+        &._main-info {
+            .img-size(152px, 92px);
+        }
+
+        &._headline {
+            &-red {
+                .img-size(14px, 14px);
+                fill: currentColor;
+                transform: translateY(2px);
+            }
+
+            &-grey {
+                .img-size(20px, 20px);
+                fill: @color-header;
+                opacity: .24;
+
+                &:first-child {
+                    margin-right: 19px;
+                }
+
+                &:hover {
+                    opacity: .5;
+                }
+            }
+
+        }
+
+        &._small {
+            .img-size(12px, 12px);
+            margin-right: 5px;
+            background-color: @color-link;
+        }
+
+        &._weather {
+            .img-size(48px, 48px);
+        }
+
+        &._traffic {
+            .img-size(48px, 35px);
+            margin-top: 6px;
+        }
+
+        &._main {
+            .img-size(44px, 44px);
+            margin: 0;
+        }
+
+        &._wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            .img-size(44px, 44px);
+            margin: 0;
+
+            &:hover {
+                position: relative;
+                top: -4px;
+            }
+        }
+
+        &._wrp-icon {
+            .img-size(18px, 18px);
+            margin: 0;
+            background-size: 18px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    &__text {
+
+        text-decoration: none;
+        color: inherit;
+
+        &._link-text-add {
+            .font-small();
+        }
+
+        &._visited {
+            text-decoration: none;
+            color: inherit;
+
+            &:hover {
+                color: @color-link;
+            }
+        }
+
+
+    }
+
+    &._link-main {
+        color: @color-main;
+        margin-right: 12px;
+        text-decoration: none;
+        .font-bold(15px);
+    }
+
+    &._link-text-option {
+        .font-light();
+        color: @color-option;
+        margin-left: 12px;
+        text-decoration: none;
+    }
+
+    &__icon:hover {
+        opacity: .5;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+
+    }
+
+    &:hover {
+        color: @color-link;
+        cursor: pointer;
+
+        & .link__img-main {
+            position: relative;
+            top: -5px;
+        }
+    }
+
+    &:focus {
+        outline: 2px solid @color-search;
+    }
+
+    // MAIL
+
+    &._mail {
+        &:hover {
+            color: inherit;
+            cursor: inherit;
+        }
+
+        &:focus {
+            outline: 2px solid @color-base;
+        }
+    }
+
+
+    &__m-text {
+        line-height: 0;
+        text-decoration: none;
+        color: inherit;
+        white-space: nowrap;
+        padding: 6px;
+
+        &:hover {
+            color: @m-color-link;
+        }
+
+        &:not(last-child) {
+            margin-right: 6px;
+        }
+
+        &._bold {
+            .font-bold(@font-small);
+            line-height: 0;
+        }
+
+        &._light {
+            .font-light(@font-small);
+            line-height: 0;
+        }
+
+        &:focus {
+            outline: 2px solid @color-base;
+        }
+    }
+
+    &._m-main {
+        color: @m-color;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 20px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:focus {
+            outline: 2px solid @color-base;
+        }
+    }
+
+    &__m-main-text {
+
+        color: @m-color;
+
+        &._m-big-light {
+            font-size: @m-font-small;
+            line-height: 20px;
+
+            &:focus {
+                outline: 2px solid @color-base;
+            }
+        }
+
+        &:hover {
+            text-decoration: underline;
+            color: @m-color;
+        }
+
+        &:focus {
+            outline: 2px solid @color-base;
+        }
+    }
+
+    &__list-titles {
+        white-space: nowrap;
+
+        &._main {
+            margin-left: 0;
+            .m-font-bold(@m-font-small);
+        }
+
+        &._active {
+            color: @m-color;
+            .m-font-bold(@m-font-small);
+
+            &:after {
+                content: '';
+                display: block;
+                height: 2px;
+                background: @m-color;
+                transform: translateY(8px);
+            }
+        }
+
+        &._unselected {
+            margin-left: 24px;
+        }
+
+        &:focus {
+            outline: 2px solid @color-base;
+        }
+    }
+
+    &._hover {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &-decor {
+            text-decoration: none;
+
+            &:after {
+                content: '';
+                display: block;
+                height: 2px;
+                background: transparent;
+                transform: translateY(8px);
+            }
+
+            &:hover {
+                color: inherit;
+
+                &:after {
+                    content: '';
+                    display: block;
+                    height: 2px;
+                    background: @color-currency-change;
+                    transform: translateY(8px);
+                }
+
+            }
+            
+            &:focus {
+                outline: 2px solid @color-base;
+            }
+        }
+
+        &-underline {
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+                color: inherit;
+                transition: text-decoration .3s;
+            }
+
+            &:focus {
+                outline: 2px solid @color-base;
+            }
+        }
+
+        &:focus {
+            outline: 2px solid @color-base;
+        }
+
+    }
+}

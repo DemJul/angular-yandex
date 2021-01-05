@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsComponent implements OnInit {
 
+  visibility: boolean = false;
+    // переключаем переменную
+  onhover(): void{
+      this.visibility=!this.visibility;
+  }
   constructor() { }
 
   ngOnInit(): void {

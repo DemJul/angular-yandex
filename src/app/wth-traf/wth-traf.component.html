@@ -1,5 +1,5 @@
 <div class="wth-traf">
-    <div class="wth-traf__block">
+    <div class="wth-traf__block" (mouseenter)="onhoverWth()" (mouseleave)="onhoverWth()">
         <ul class="wth-traf__title">
             <li class="wth-traf__subtitle link _link-main" tabindex="12">
                 Погода
@@ -7,50 +7,48 @@
             <li class="wth-traf__subtitle link _link-middle" tabindex="13">
                 Карта осадков
             </li>
-            <li class="wth-traf__menu">
+            <li class="wth-traf__menu" [ngClass]="{_visible: visibilityWth}">
                 <app-dropdown></app-dropdown>
             </li>
         </ul>
-        <div class="wth-traf__info">
-            <div class="wth-traf__current-info link link__row" tabindex="14">
-                <img class="link__img _weather" src="./images/weather.png" alt="коронавирус" />
-                <span class="link__text"> -5&deg; </span>
+        <div class=" wth-traf__info ">
+            <div class="wth-traf__current-info link link__row " tabindex="14 ">
+                <img class="link__img _weather " [src]="fullImagePath " alt="коронавирус " />
+                <span class="link__text "> -5&deg; </span>
             </div>
-            <div class="wth-traf__current-addition">
-                <div class="link" tabindex="15">Ночью -7,</div>
-                <div class="link" tabindex="16">Утром -7</div>
+            <div class="wth-traf__current-addition ">
+                <div class="link " tabindex="15 ">Ночью -7,</div>
+                <div class="link " tabindex="16 ">Утром -7</div>
             </div>
         </div>
     </div>
-    <div class="wth-traf__block">
-        <ul class="wth-traf__title">
-            <li class="wth-traf__subtitle link _link-main" tabindex="17">
+    <div class="wth-traf__block " (mouseenter)="onhoverTraf()" (mouseleave)="onhoverTraf()">
+        <ul class="wth-traf__title ">
+            <li class="wth-traf__subtitle link _link-main " tabindex="17 ">
                 Пробки
             </li>
-            <li class="wth-traf__subtitle link _link-middle" tabindex="18">
+            <li class="wth-traf__subtitle link _link-middle " tabindex="18 ">
                 Метро
             </li>
-            <li class="wth-traf__subtitle link _link-middle" tabindex="19">
+            <li class="wth-traf__subtitle link _link-middle " tabindex="19 ">
                 Расписания
             </li>
-            <li class="wth-traf__subtitle link _link-middle" tabindex="20">
+            <li class="wth-traf__subtitle link _link-middle " tabindex="20 ">
                 Такси
             </li>
-            <li class="wth-traf__menu dropdown">
-                <div class="dropdown__circle"></div>
-                <div class="dropdown__circle"></div>
-                <div class="dropdown__circle"></div>
+            <li class="wth-traf__menu" [ngClass]="{_visible: visibilityTraf}">
+                <app-dropdown></app-dropdown>
             </li>
         </ul>
-        <div class="wth-traf__info">
-            <div class="wth-traf__current-info link link__row" tabindex="21">
-                <svg class="link__img _traffic">
-            <use href="#icon-traffic"></use>
+        <div class="wth-traf__info ">
+            <div class="wth-traf__current-info link link__row " tabindex="21 ">
+                <svg class="link__img _traffic ">
+            <use href="#icon-traffic "></use>
           </svg>
-                <span class="link__text"> 1 </span>
+                <span class="link__text "> 1 </span>
             </div>
-            <div class="wth-traf__current-addition">
-                <div class="link" tabindex="22">
+            <div class="wth-traf__current-addition ">
+                <div class="link " tabindex="22 ">
                     До конца дня дороги свободны
                 </div>
             </div>

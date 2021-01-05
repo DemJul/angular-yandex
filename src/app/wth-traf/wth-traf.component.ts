@@ -7,7 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WthTrafComponent implements OnInit {
 
-  constructor() { }
+  visibilityWth: boolean = false;
+  visibilityTraf: boolean = false;
+    // переключаем переменную
+  onhoverWth(): void{
+      this.visibilityWth=!this.visibilityWth;
+  }
+
+  onhoverTraf(): void{
+    this.visibilityTraf=!this.visibilityTraf;
+  }
+
+  fullImagePath: string;
+
+  constructor() {
+    this.fullImagePath = '/assets/images/weather.png';
+  }
 
   ngOnInit(): void {
   }

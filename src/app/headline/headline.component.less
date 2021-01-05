@@ -6,14 +6,17 @@
 .font-header-light() {
     font-size: @font-header-light;
  }
+ @import "link";
 
 .headline {
 
     &._yandex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         color: @color-header;
         line-height: 42px;
         margin-right: 210px;
-        margin-top: 10px;
         padding-left: 20px;
     }
 

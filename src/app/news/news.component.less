@@ -1,4 +1,5 @@
 @import "font-vars";
+@import "link";
 .news {
     width: 627px;
     height: 172px;
@@ -10,7 +11,10 @@
         line-height: 1.25;
     }
 
-    &:hover .dropdown {
-        visibility: visible;
+    &__menu{
+        visibility: hidden;
+        &._visible {
+            visibility: visible;
+        }
     }
 }

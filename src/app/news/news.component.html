@@ -1,4 +1,4 @@
-<div class="news">
+<div class="news" (mouseenter)="onhover()" (mouseleave)="onhover()">
     <div class="news__titles">
         <a class="news__subtitle link _link-main" href="#" tabindex="1">Сейчас в СМИ</a
       >
@@ -11,7 +11,7 @@
         tabindex="3"
         >Коронавирус</a
       >
-      <div class="news__menu">
+      <div class="news__menu" [ngClass]="{_visible: visibility}">
         <app-dropdown></app-dropdown>
       </div>
     </div>
